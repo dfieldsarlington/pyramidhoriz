@@ -130,7 +130,7 @@ d3.csv("https://arlingtonma.gov/Home/ShowDocument?id=25624", function(error, dat
   // Add labeled rects for each birthyear (so that no enter or exit is required).
   var birthyear = birthyears.selectAll(".birthyear")
       .data(d3.scale.ordinal
-	  .rangeRoundBands(year0 - age1, year1 + 1, 5))
+	  .rangeRoundBands(year)
     .enter().append("g")
       .attr("class", "birthyear")
       .attr("transform", function(birthyear) { return "translate(" + x(birthyear) + ",0)"; });
